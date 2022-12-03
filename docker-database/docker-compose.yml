@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: on-failure
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_DB=academiadigital
+    ports:
+      - '5432:5432'
+    volumes: 
+      - academiadigital-pgdata:/var/lib/postgresql/data
+volumes:
+  academiadigital-pgdata:
