@@ -1,6 +1,7 @@
 package br.com.ulteriorti.academia.digital.service;
 
 import br.com.ulteriorti.academia.digital.entity.Aluno;
+import br.com.ulteriorti.academia.digital.entity.AvaliacaoFisica;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoUpdateForm;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoForm;
 
@@ -41,4 +42,9 @@ public interface IAlunoService {
    * @param id - id do Aluno que será removido.
    */
   void delete(Long id);
+
+    List<AvaliacaoFisica> getAllAvaliacaoFisica();
+
+
+  List<AvaliacaoFisica> getAllAvaliacaoFisicaById(Long id);
 }

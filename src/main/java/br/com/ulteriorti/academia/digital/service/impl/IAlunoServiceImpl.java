@@ -1,6 +1,7 @@
 package br.com.ulteriorti.academia.digital.service.impl;
 
 import br.com.ulteriorti.academia.digital.entity.Aluno;
+import br.com.ulteriorti.academia.digital.entity.AvaliacaoFisica;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoForm;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoUpdateForm;
 import br.com.ulteriorti.academia.digital.repository.AlunoRepository;
@@ -44,5 +45,16 @@ public class IAlunoServiceImpl implements IAlunoService {
     @Override
     public void delete(Long id) {
 
+    }
+
+    @Override
+    public List<AvaliacaoFisica> getAllAvaliacaoFisica() {
+        return null;
+    }
+
+    @Override
+    public List<AvaliacaoFisica> getAllAvaliacaoFisicaById(Long id) {
+        Aluno aluno = repository.findById(id).get();
+        return aluno.getAvaliacoes();
     }
 }
