@@ -5,14 +5,14 @@
 <p>Ao final deste projeto, o Dev irá conhecer os principais conceitos de mapeamento objeto relacional (ORM) usando o <strong>Spring Data JPA</strong>. Para isso, uma <strong>API RESTful</strong> será desenvolvida com ênfase na modelagem de suas entidades, no domínio de uma academia de ginástica.</p>
 
 <h2>
-🛑 Pré-requistos
+🛑 Como rodar
 </h2>
 
-- [x] Fundamentos do Spring Boot
+- [x] executar docker compose no diretório docker-database
 
-- [x] Noções de SQL
+- [x] Executar o projeto, a base de dados está previamente configurada
 
-<h2> 🚦 Guia </h2>
+<h2> 🚦 Guia de implementação </h2>
 
 <ol>
     <li> Apresentação do Projeto Base </li>
@@ -27,7 +27,7 @@
 
 <ul>
     <li>IDE IntelliJ</li>
-    <li>Java 11</li>
+    <li>Java 17</li>
     <li>Maven</li>
     <li><strong>Spring Web</strong></li>
     <li><strong>Spring Data JPA</strong></li>
@@ -35,6 +35,7 @@
     <li><strong>Hibernate Validator</strong></li>
     <li>Lombok</li>
     <li>Postman</li>
+    <li>Docker</li>
 </ul>
 
 
@@ -92,9 +93,7 @@ Se possível:
 
 🐛 Encontrar e relatar issues
 
-------------
-
-Disponibilizado com ♥ por [cami-la](https://www.linkedin.com/in/cami-la/ "cami-la").
+---------
 
 
 
