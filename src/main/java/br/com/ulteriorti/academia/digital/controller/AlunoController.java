@@ -29,4 +29,8 @@ public class AlunoController {
     public List<AvaliacaoFisica> getAllAvaliacaoFisicaById(@PathVariable Long id){
         return service.getAllAvaliacaoFisicaById(id);
     }
+    @GetMapping("/datanascimento")
+    public List<Aluno> getAll(@RequestParam(value = "dataDeNascimento",required = false)String dataDeNascimento){
+        return service.getAll(dataDeNascimento);
+    }
 }

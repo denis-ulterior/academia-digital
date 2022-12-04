@@ -4,11 +4,13 @@ import br.com.ulteriorti.academia.digital.entity.Aluno;
 import br.com.ulteriorti.academia.digital.entity.AvaliacaoFisica;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoForm;
 import br.com.ulteriorti.academia.digital.entity.form.AlunoUpdateForm;
+import br.com.ulteriorti.academia.digital.infra.utils.JavaTimeUtils;
 import br.com.ulteriorti.academia.digital.repository.AlunoRepository;
 import br.com.ulteriorti.academia.digital.service.IAlunoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -56,5 +58,12 @@ public class IAlunoServiceImpl implements IAlunoService {
     public List<AvaliacaoFisica> getAllAvaliacaoFisicaById(Long id) {
         Aluno aluno = repository.findById(id).get();
         return aluno.getAvaliacoes();
+    }
+
+    public List<Aluno> getAll(String dataDeNascimento) {
+        if (dataDeNascimento == null)
+            return repository.findAll();
+        LocalDate localDate = LocalDate.parse(dataDeNascimento, JavaTimeUtils.LOCAL_DATE_FORMATTER);
+        return repository.findByDataDeNascimento(localDate);
     }
 }
